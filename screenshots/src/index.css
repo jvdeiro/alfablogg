@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0066cc;
+  --secondary: #ff6600;
+  --accent: #00cc99;
+  --background: #f8f9fa;
+  --foreground: #1a1a1a;
+  --muted: #6c757d;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --border: #e9ecef;
+  --input: #e9ecef;
+  --ring: #0066cc;
+  
+  /* Cores para editorias */
+  --palpites: #ff6600;
+  --noticias: #0066cc;
+  --estatisticas: #00cc99;
+  --guias: #9933cc;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors;
+  }
+  
+  .card {
+    @apply bg-card rounded-lg border border-border p-4 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .card-title {
+    @apply text-xl font-bold mb-2;
+  }
+  
+  .card-subtitle {
+    @apply text-sm text-muted mb-4;
+  }
+  
+  .editoria-tag {
+    @apply text-xs font-medium px-2 py-1 rounded-full;
+  }
+  
+  .editoria-palpites {
+    @apply bg-[#ff6600]/10 text-[#ff6600];
+  }
+  
+  .editoria-noticias {
+    @apply bg-[#0066cc]/10 text-[#0066cc];
+  }
+  
+  .editoria-estatisticas {
+    @apply bg-[#00cc99]/10 text-[#00cc99];
+  }
+  
+  .editoria-guias {
+    @apply bg-[#9933cc]/10 text-[#9933cc];
+  }
+}
